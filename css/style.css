@@ -1,0 +1,550 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*Reset para REMS */
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+#Logo{
+    width: 40rem;
+    height: auto;
+    size: auto;
+}
+body{
+    font-family: 'Abhaya Libre', serif;
+    font-size: 1.5rem;
+}
+.contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+    font-size: 2rem;
+    line-height: 2;
+    /*margin-left: auto;
+    margin-right: auto;*/
+}
+img{
+    max-width: 100%;
+    
+}
+
+
+.contenedor h3{
+    font-weight: 600; /*Cambiar el grosor a la fuente*/
+}
+
+.contenido-header{
+    height: 100%; /*Hace que el contenedor hijo tome la altura
+    completa de la seccion del padre*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .contenido-header{
+        text-align: left;
+    }
+}
+
+
+
+h1{
+    font-size: 3.4rem;
+}
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2.8rem;
+}
+
+h4{
+    font-size: 2.4rem;
+}
+/* Utilidades*/
+.section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.sectionServicios{
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+.fw-400{
+    font-weight: 400;
+}
+.centrar-texto{
+    text-align: center;
+}
+.d-block{
+    display: block !important; /*Evita que la propiedad sea actualizada
+    en la siguiente parte del codigo*/
+}
+.contenido-centrado{
+    max-width: 70rem;
+}
+/*Botones*/
+.boton{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    display: block;
+    flex: 0 0 100%; /*Aplicará el 100% del tamaño a los
+    botones flex*/
+}
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block; /*Los botones tendran inline block*/
+        flex: 0 0 auto; /*Los tamaños de los botones serán automatico
+        para los botones flex*/
+    }
+}
+.boton:hover{
+    cursor: pointer;
+}
+.boton-amarillo{
+    background-color: #db7655ef;
+}
+
+.boton-verde{
+    background-color: #71B100;
+}
+
+/* Header */
+.contenido-header h1{
+    color: white;
+    padding-bottom: 2rem; /*Separación desde dentro del elemento
+    margin utiliza separacion de todo el elemento*/
+    /*max-width: 30rem; hara que todo el elemento no mida 
+    mas de 300px de espacio*/
+    /*line-height: 1; da un interlineado de 1 renglon*/
+    font-size: 3.6rem;
+}
+.barra{
+    padding-top: 2rem;
+}
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.site-header.inicio{ /*Este afecta al elemento co 2 clases */
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem;
+    
+}
+.site-header{ /* No afecta más que al site-header con una clase*/
+    background-color: #333333;
+    padding: 0.5rem 0 2rem 0; /* El padding es agredado en forma de reloj
+    de arriba hacia al lado izquierdo*/
+}
+
+
+.navegacion a {
+    color:  white;
+    text-decoration:none;
+    font-size: 2.7rem;
+    display: block;
+}
+
+/*Mobile menu*/
+.mobile-menu img{
+    width: 5rem;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu{
+        display: none;
+    }
+}
+
+.navegacion:target{
+    display: block;
+}
+
+.navegacion{
+    display: none;
+}
+    
+
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: block;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 2.4rem;
+    }
+    .navegacion a:last-of-type{   /* Pseudoselector, el cual seleccionara 
+        el ultimo elemento   */
+        margin: 0;  /* Se elminia el margin de el elemento*/
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .Imagenes-servicios{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
+
+.imagenes{
+    flex-basis: calc(33.3% - 2.5rem); /*Toma el 33.3% de la imagen
+    y le resta 1 rem que son 10 pixeles*/
+    text-align: center;
+    line-height: 2; /*Interlineado*/
+}
+
+@media (min-width: 768px) {
+    .iconos-servicios{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+.iconos{
+    
+    text-align: center; /*Alinear texto*/
+    line-height: 2;
+}
+
+@media (min-width: 768px) {
+    .iconos{
+    flex-basis: calc(33.3% - 2.5rem); /*Toma el 33.3% de la imagen
+    y le resta 1 rem que son 10 pixeles*/
+    }
+}
+
+
+.imagenes h3{
+    text-transform: capitalize; 
+}
+
+.iconos h3{
+    text-transform: uppercase; /*Pasar el texto a mayusculas*/
+    font-size: 2.3rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor-anuncios{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /*Permite que los elementos se distribuyan en
+        varias lineas dependiendo de la agrupacion de la opcion
+        flex-basis*/
+        
+    }
+}
+
+.anuncio{
+    flex: 0 0 calc(33.3% - 1.5rem); /* se colocan en orden de
+    flex:-grow
+    flex-shrink: ;
+    flex-basis: ;*/
+    flex-grow: 0;
+    flex-shrink: 1; /*Hara que el tamaño no se encoja*/
+    flex-basis: calc(33.3% - 1.5rem); 
+    /*border-style: solid;
+    border-color: silver;
+    border-width: 1px;*/
+    border: 1px solid silver;
+    background-color: #F5F5F5;
+    margin-bottom: 2rem; /*Separacion en cada anuncio*/
+}
+.contenido-anuncio{
+    padding: 2rem; /*El padding da espacio en todas las direcciones
+    y sistituye el siguente codigo
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;*/
+}
+
+.contenido-anuncio h3,p{ /*remueve el margin del h3 y p, para que esté
+    mas pequeño*/
+    margin: 0%;
+}
+.precio{
+    color: #71B100;
+    font-weight: 700;
+}
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;
+}
+.iconos-caracteristicas{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    max-width: 50rem;
+}
+
+.iconos-caracteristicas img{
+    width: 5rem;
+    margin-right: 1.5rem;
+}
+.iconos-caracteristicas li{
+    display: flex;
+    align-items: center;
+    margin-right: 4rem;
+}
+
+
+/*Contacto home*/
+.imagen-contacto{
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+}
+.imagen-contacto{
+    flex: 0 0 95%; /*Divide el pixelaje entre la cantidad de contenido 
+    que se encuentra dentro del div*/
+    color: white;
+}
+
+@media (min-width: 768px) {
+    /*seccion-inferior*/
+    .seccion-inferior{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .seccion-inferior .blog{
+        flex-basis: 60%; /* Aumenta la longitud a un 60% del tamaño
+        de la pantalla*/
+    }
+
+    .seccion-inferior .testimoniales{
+        flex-basis: calc(40% - 2rem); /* toma el 40 de la longitud de la 
+        pantalla menos 2 rem*/
+    }
+}
+
+
+.entrada-blog{
+    margin-bottom: 2rem ;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    }
+}
+
+.entrada-blog :last-of-type{ /*Se selecciona el ultimo elemento
+    y se elimina el marge*/
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog .imagen{
+        flex-basis: 40%;
+    }
+    .entrada-blog .texto-entrada{
+    
+        flex-basis: calc(60% - 3rem);
+    }
+}
+
+
+.texto-entrada h4{
+    margin: 0;
+    line-height: 1.1; /*Interlineado*/
+}
+
+.texto-entrada a{
+    color: black;
+    text-decoration: none; /*Se elimina la linea que muestra que es un enlace*/
+}
+.texto-entrada h4::after{ /*Despues del h4 se creara un pseudo elemento*/
+    content: ''; /*Pseudoelemento, son elementos que no existen*/
+    display: block;
+    width: 15rem; /*150px*/
+    height: .5rem;
+    background-color: rgba(102, 230, 91, 0.945);
+    margin-top: 1rem;
+}
+.texto-entrada span{
+    color: rgb(255, 187, 0);
+}
+
+/* Testimoliales*/
+.testimonial{
+    background-color: rgba(65, 194, 53, 0.945);
+    font-size: 2.4rem;
+    padding: 2rem; /*Espacio hacia adentro*/
+    color: white;
+    border-radius: 1.5rem; /*En cada esquina tiene u  borde de 15px*/
+}
+.testimonial p{
+    text-align: right; /*Se alinea el texto a la derecha*/
+}
+.testimonial blockquote::before{ /*Asigna elemento antes del blockquote*/
+/*Pseudoelemento*/
+ content: '';
+ background-image: url(../img/comilla.svg);
+ width: 4rem;
+ height: 4rem;
+ position: absolute;
+ left: -1.6rem;
+}
+
+.testimonial blockquote{
+    position: relative;
+    padding-left: 4rem;
+    font-weight: 400;
+}
+/*Footer*/
+
+
+.contenedor-footer{
+   padding: 1rem 0;
+   text-align: center;
+   color: white;
+}
+.site-footer{
+    background-color:rgb(56, 55, 55);
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .contenedor-footer{
+      display: flex;
+      justify-content: space-between;
+    }  
+  }
+
+
+.site-footer nav{
+    display: none; /*Se oculta el menú NAV */
+}
+
+@media (min-width: 768px) {
+    .site-footer nav{
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .sobre-nosotros{
+        display: flex;
+        justify-content: space-around;
+    }
+   
+    .sobre-nosotros .mision{
+        flex-basis: calc(50% - 1rem);
+        max-width: 50rem;
+    }
+    .sobre-nosotros .vision{
+        flex-basis: calc(50% - 1rem);
+        max-width: 50rem;
+    }
+    .sobre-nosotros .valores{
+        flex-basis: calc(50% - 1rem);
+        max-width: 90%;
+    } 
+}
+
+
+/*CCS para paginas secundarias o "Internas"*/
+
+@media (min-width: 768px) {
+    .contenido-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /*repite la fracion 2 veces de modo horizontal*/
+        /*1 fraccion*/
+        /**/
+        grid-column-gap: 3rem; /*Establece un espacio entre columnas*/
+    }
+}
+
+
+.texto-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0; /*Se elimina e margen por defecto*/
+    padding: 1rem 0 3rem 0; 
+}
+
+.resumen-propiedad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Contacto*/
+.contacto p{
+    font-size: 1.5rem;
+    color: #333333;
+    margin: 2rem 0 0 0;
+}
+legend{
+    font-size: 2.5rem;
+    color: #333333;
+}
+label{
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+}
+input:not([type="submit"]), /*Selector de atributo*/ /*atributo negación que aplicará
+formato menos a submit*/
+textarea,
+select{
+/*input [type="text"],
+input [type="tel"]*/
+    padding: 0.7rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    border: none;
+    border-radius: 0.4rem;
+    margin-bottom:2rem;
+}
+input[type="radio"]{ 
+    width: auto; /*Tomará el tamaño que necesite*/
+    margin: 0;
+}
+select{
+    -webkit-appearance: none; /*Elimina apariencias del navegador por defecto*/
+    appearance: none; 
+}
+textarea{
+    height: 20rem;
+}
+.forma-contacto{
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: center;
+}
